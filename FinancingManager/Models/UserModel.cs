@@ -1,6 +1,6 @@
 ﻿namespace FinancingManager.Models
 {
-    public class UserModel
+    internal class UserModel
     {
         public int Id { get; set; }
     }
