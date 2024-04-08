@@ -33,6 +33,8 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.logInBtn = new System.Windows.Forms.Button();
+            this.signUpBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // logInLabel
@@ -81,11 +83,39 @@
             this.passwordTextBox.Size = new System.Drawing.Size(205, 23);
             this.passwordTextBox.TabIndex = 4;
             // 
+            // logInBtn
+            // 
+            this.logInBtn.BackColor = System.Drawing.Color.OliveDrab;
+            this.logInBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.logInBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.logInBtn.Location = new System.Drawing.Point(12, 163);
+            this.logInBtn.Name = "logInBtn";
+            this.logInBtn.Size = new System.Drawing.Size(146, 28);
+            this.logInBtn.TabIndex = 5;
+            this.logInBtn.Text = "Log In";
+            this.logInBtn.UseVisualStyleBackColor = false;
+            this.logInBtn.Click += new System.EventHandler(this.logInBtn_Click);
+            // 
+            // signUpBtn
+            // 
+            this.signUpBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.signUpBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.signUpBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.signUpBtn.Location = new System.Drawing.Point(164, 163);
+            this.signUpBtn.Name = "signUpBtn";
+            this.signUpBtn.Size = new System.Drawing.Size(137, 28);
+            this.signUpBtn.TabIndex = 6;
+            this.signUpBtn.Text = "Sign Up";
+            this.signUpBtn.UseVisualStyleBackColor = false;
+            this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 181);
+            this.ClientSize = new System.Drawing.Size(321, 203);
+            this.Controls.Add(this.signUpBtn);
+            this.Controls.Add(this.logInBtn);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
@@ -105,5 +135,7 @@
         private Label usernameLabel;
         private Label passwordLabel;
         private TextBox passwordTextBox;
+        private Button logInBtn;
+        private Button signUpBtn;
     }
 }
