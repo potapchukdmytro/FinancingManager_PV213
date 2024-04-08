@@ -8,5 +8,7 @@ namespace FinancingManager.Models
 {
     internal class LogInModel
     {
+        public string Login { get; set; }
+        public string Password { get; set; }
     }
 }
