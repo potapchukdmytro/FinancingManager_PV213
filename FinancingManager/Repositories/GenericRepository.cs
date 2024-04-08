@@ -1,4 +1,4 @@
-﻿using FinancingManager.Entities;
+﻿  using FinancingManager.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinancingManager.Repositories
