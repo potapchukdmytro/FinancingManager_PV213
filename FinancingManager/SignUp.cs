@@ -10,26 +10,26 @@ using System.Windows.Forms;
 
 namespace FinancingManager
 {
-    public partial class LogIn : Form
+    public partial class SignUp : Form
     {
-        public LogIn()
+        public DialogResult result;
+
+        public SignUp()
         {
             InitializeComponent();
         }
 
-        private void signUpBtn_Click(object sender, EventArgs e)
+        private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            SignUp signUp = new SignUp();
-            this.Hide();
-            signUp.ShowDialog();
-
-            if (signUp.result == DialogResult.Abort)
-                this.Close();
-            else
-                this.Visible = true;
+            result = DialogResult.Abort;
         }
 
         private void logInBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void signUpBtn_Click(object sender, EventArgs e)
         {
 
         }
