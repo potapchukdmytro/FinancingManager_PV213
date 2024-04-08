@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinancingManager.Models
 {
-    internal class LogInModel
+    public class LogInModel
     {
         public string Login { get; set; }
         public string Password { get; set; }
