@@ -35,6 +35,9 @@
             passwordTextBox = new TextBox();
             logInBtn = new Button();
             signUpBtn = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // logInLabel
@@ -113,11 +116,46 @@
             signUpBtn.UseVisualStyleBackColor = false;
             signUpBtn.Click += signUpBtn_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(187, 132);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Segoe Print", 7.8F, FontStyle.Italic, GraphicsUnit.Point);
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(110, 129);
+            label2.Name = "label2";
+            label2.Size = new Size(234, 25);
+            label2.TabIndex = 8;
+            label2.Text = "label2";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Visible = false;
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Segoe Print", 7.8F, FontStyle.Italic, GraphicsUnit.Point);
+            label3.ForeColor = Color.Red;
+            label3.Location = new Point(110, 180);
+            label3.Name = "label3";
+            label3.Size = new Size(234, 25);
+            label3.TabIndex = 9;
+            label3.Text = "label3";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            label3.Visible = false;
+            // 
             // LogIn
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(367, 271);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(signUpBtn);
             Controls.Add(logInBtn);
             Controls.Add(passwordTextBox);
@@ -141,5 +179,8 @@
         private TextBox passwordTextBox;
         private Button logInBtn;
         private Button signUpBtn;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }
