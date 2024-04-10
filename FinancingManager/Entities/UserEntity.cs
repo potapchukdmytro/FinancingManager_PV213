@@ -13,6 +13,5 @@
 
         public required string Password { get; set; }
         public virtual List<CostEntity> Costs { get; set; } = new();
-
     }
 }

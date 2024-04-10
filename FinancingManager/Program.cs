@@ -19,6 +19,7 @@ namespace FinancingManager
             Seeder.SeedAsync(config.Context).Wait();
 
             Application.Run(new MainForm(config));
+
         }
     }
 }
