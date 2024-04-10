@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FinancingManager.Entities;
 using FinancingManager.Models;
 using FinancingManager.Repositories;
 
@@ -22,6 +23,45 @@ namespace FinancingManager.Services
             var models = mapper.Map<List<UserModel>>(entities);
 
             return models;
+        }
+
+        public async Task AddAsync(UserEntity entity)
+        {
+            await userRepository.AddAsync(entity);
+        }
+
+        public async Task<UserEntity?> GetByIdAsync(int id)
+        {
+            var entity = await userRepository.GetByIdAsync(id);
+            return entity;
+        }
+
+        public async Task RemoveAsync(UserEntity entity)
+        {
+            var existingEntity = await GetByIdAsync(entity.Id);
+
+            if (existingEntity != null)
+            {
+                await userRepository.Remove(entity);
+            }
+            else
+            {
+                throw new Exception("User not found.");
+            }
+        }
+
+        public async Task UpdateAsync(UserEntity entity)
+        {
+            var existingEntity = await GetByIdAsync(entity.Id);
+
+            if (existingEntity != null)
+            {
+                await userRepository.Update(entity);
+            }
+            else
+            {
+                throw new Exception("User not found.");
+            }
         }
     }
 }
