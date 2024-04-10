@@ -28,143 +28,150 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            dataGridViewAll = new DataGridView();
+            menuStrip1 = new MenuStrip();
+            menuItemAdd = new ToolStripMenuItem();
+            menuItemEdit = new ToolStripMenuItem();
+            menuItemDelete = new ToolStripMenuItem();
+            menuItemShow = new ToolStripMenuItem();
+            menuItemShowAll = new ToolStripMenuItem();
+            ьenuItemCosts = new ToolStripMenuItem();
+            ьenuItemRevenue = new ToolStripMenuItem();
+            textBoxSearch = new ToolStripTextBox();
+            menuItemUSD = new ToolStripMenuItem();
+            menuItemUAH = new ToolStripMenuItem();
+            menuItemExit = new ToolStripMenuItem();
+            dataGridViewTotal = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAll).BeginInit();
+            menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTotal).BeginInit();
+            SuspendLayout();
             // 
             // dataGridViewAll
             // 
-            this.dataGridViewAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAll.Location = new System.Drawing.Point(12, 30);
-            this.dataGridViewAll.Name = "dataGridViewAll";
-            this.dataGridViewAll.RowTemplate.Height = 25;
-            this.dataGridViewAll.Size = new System.Drawing.Size(723, 322);
-            this.dataGridViewAll.TabIndex = 1;
+            dataGridViewAll.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewAll.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAll.Location = new Point(12, 40);
+            dataGridViewAll.Margin = new Padding(3, 4, 3, 4);
+            dataGridViewAll.MultiSelect = false;
+            dataGridViewAll.Name = "dataGridViewAll";
+            dataGridViewAll.RowHeadersVisible = false;
+            dataGridViewAll.RowHeadersWidth = 51;
+            dataGridViewAll.RowTemplate.Height = 25;
+            dataGridViewAll.Size = new Size(857, 429);
+            dataGridViewAll.TabIndex = 1;
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItemAdd,
-            this.menuItemEdit,
-            this.menuItemDelete,
-            this.menuItemShow,
-            this.textBoxSearch,
-            this.menuItemUSD,
-            this.menuItemUAH,
-            this.menuItemExit});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(747, 27);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuItemAdd, menuItemEdit, menuItemDelete, menuItemShow, textBoxSearch, menuItemUSD, menuItemUAH, menuItemExit });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(881, 33);
+            menuStrip1.TabIndex = 6;
+            menuStrip1.Text = "menuStrip1";
             // 
             // menuItemAdd
             // 
-            this.menuItemAdd.Image = global::FinancingManager.Properties.Resources.free_icon_font_square_plus_9239975;
-            this.menuItemAdd.Name = "menuItemAdd";
-            this.menuItemAdd.Size = new System.Drawing.Size(28, 23);
+            menuItemAdd.Image = Properties.Resources.free_icon_font_square_plus_9239975;
+            menuItemAdd.Name = "menuItemAdd";
+            menuItemAdd.Size = new Size(34, 27);
             // 
             // menuItemEdit
             // 
-            this.menuItemEdit.Image = global::FinancingManager.Properties.Resources.free_icon_font_settings_3917035;
-            this.menuItemEdit.Name = "menuItemEdit";
-            this.menuItemEdit.Size = new System.Drawing.Size(28, 23);
+            menuItemEdit.Image = Properties.Resources.free_icon_font_settings_3917035;
+            menuItemEdit.Name = "menuItemEdit";
+            menuItemEdit.Size = new Size(34, 27);
             // 
             // menuItemDelete
             // 
-            this.menuItemDelete.Image = global::FinancingManager.Properties.Resources.free_icon_font_trash_3917176;
-            this.menuItemDelete.Name = "menuItemDelete";
-            this.menuItemDelete.Size = new System.Drawing.Size(28, 23);
+            menuItemDelete.Image = Properties.Resources.free_icon_font_trash_3917176;
+            menuItemDelete.Name = "menuItemDelete";
+            menuItemDelete.Size = new Size(34, 27);
             // 
             // menuItemShow
             // 
-            this.menuItemShow.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItemShowAll,
-            this.ьenuItemCosts,
-            this.ьenuItemRevenue});
-            this.menuItemShow.Name = "menuItemShow";
-            this.menuItemShow.Size = new System.Drawing.Size(79, 23);
-            this.menuItemShow.Text = "Показати...";
+            menuItemShow.DropDownItems.AddRange(new ToolStripItem[] { menuItemShowAll, ьenuItemCosts, ьenuItemRevenue });
+            menuItemShow.Name = "menuItemShow";
+            menuItemShow.Size = new Size(97, 27);
+            menuItemShow.Text = "Показати...";
             // 
             // menuItemShowAll
             // 
-            this.menuItemShowAll.Name = "menuItemShowAll";
-            this.menuItemShowAll.Size = new System.Drawing.Size(180, 22);
-            this.menuItemShowAll.Text = "Все";
+            menuItemShowAll.Name = "menuItemShowAll";
+            menuItemShowAll.Size = new Size(148, 26);
+            menuItemShowAll.Text = "Все";
             // 
             // ьenuItemCosts
             // 
-            this.ьenuItemCosts.Name = "ьenuItemCosts";
-            this.ьenuItemCosts.Size = new System.Drawing.Size(180, 22);
-            this.ьenuItemCosts.Text = "Витрати";
+            ьenuItemCosts.Name = "ьenuItemCosts";
+            ьenuItemCosts.Size = new Size(148, 26);
+            ьenuItemCosts.Text = "Витрати";
             // 
             // ьenuItemRevenue
             // 
-            this.ьenuItemRevenue.Name = "ьenuItemRevenue";
-            this.ьenuItemRevenue.Size = new System.Drawing.Size(180, 22);
-            this.ьenuItemRevenue.Text = "Доходи";
+            ьenuItemRevenue.Name = "ьenuItemRevenue";
+            ьenuItemRevenue.Size = new Size(148, 26);
+            ьenuItemRevenue.Text = "Доходи";
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.AutoSize = false;
-            this.textBoxSearch.AutoToolTip = true;
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(450, 23);
-            this.textBoxSearch.Text = "Пошук";
-            // 
-            // menuItemExit
-            // 
-            this.menuItemExit.Image = global::FinancingManager.Properties.Resources.gui_check_no_icon_157196;
-            this.menuItemExit.Name = "menuItemExit";
-            this.menuItemExit.Size = new System.Drawing.Size(28, 23);
-            // 
-            // menuItemUAH
-            // 
-            this.menuItemUAH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.menuItemUAH.Name = "menuItemUAH";
-            this.menuItemUAH.Size = new System.Drawing.Size(45, 23);
-            this.menuItemUAH.Text = "UAH";
+            textBoxSearch.AutoSize = false;
+            textBoxSearch.AutoToolTip = true;
+            textBoxSearch.Name = "textBoxSearch";
+            textBoxSearch.Size = new Size(514, 27);
+            textBoxSearch.Text = "Пошук";
             // 
             // menuItemUSD
             // 
-            this.menuItemUSD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.menuItemUSD.Name = "menuItemUSD";
-            this.menuItemUSD.Size = new System.Drawing.Size(44, 23);
-            this.menuItemUSD.Text = "USD";
+            menuItemUSD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            menuItemUSD.Name = "menuItemUSD";
+            menuItemUSD.Size = new Size(53, 27);
+            menuItemUSD.Text = "USD";
+            // 
+            // menuItemUAH
+            // 
+            menuItemUAH.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            menuItemUAH.Name = "menuItemUAH";
+            menuItemUAH.Size = new Size(56, 27);
+            menuItemUAH.Text = "UAH";
+            // 
+            // menuItemExit
+            // 
+            menuItemExit.Image = Properties.Resources.gui_check_no_icon_157196;
+            menuItemExit.Name = "menuItemExit";
+            menuItemExit.Size = new Size(34, 27);
             // 
             // dataGridViewTotal
             // 
-            this.dataGridViewTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTotal.Location = new System.Drawing.Point(12, 358);
-            this.dataGridViewTotal.Name = "dataGridViewTotal";
-            this.dataGridViewTotal.RowTemplate.Height = 25;
-            this.dataGridViewTotal.Size = new System.Drawing.Size(723, 148);
-            this.dataGridViewTotal.TabIndex = 7;
+            dataGridViewTotal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTotal.Location = new Point(14, 477);
+            dataGridViewTotal.Margin = new Padding(3, 4, 3, 4);
+            dataGridViewTotal.Name = "dataGridViewTotal";
+            dataGridViewTotal.RowHeadersWidth = 51;
+            dataGridViewTotal.RowTemplate.Height = 25;
+            dataGridViewTotal.Size = new Size(855, 107);
+            dataGridViewTotal.TabIndex = 7;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 516);
-            this.Controls.Add(this.dataGridViewTotal);
-            this.Controls.Add(this.dataGridViewAll);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "MainForm";
-            this.Text = "Financing Manager";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 392);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(881, 589);
+            Controls.Add(dataGridViewTotal);
+            Controls.Add(dataGridViewAll);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Name = "MainForm";
+            Text = "Financing manager";
+            Load += MainForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAll).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTotal).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

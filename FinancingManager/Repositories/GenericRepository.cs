@@ -37,7 +37,7 @@ namespace FinancingManager.Repositories
                 .FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public IQueryable<TEntity> GetAll(TEntity entity)
+        public IQueryable<TEntity> GetAll()
         {
             return _context.Set<TEntity>().AsNoTracking();
         }

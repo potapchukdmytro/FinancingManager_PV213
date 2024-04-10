@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FinancingManager.Models;
+using FinancingManager.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,15 @@ namespace FinancingManager
 {
     public partial class LogIn : Form
     {
-        public LogIn()
+        public UserModel? user;
+        private readonly UserService userService;
+
+        public LogIn(UserService userService)
         {
             InitializeComponent();
+            user = null;
+            this.userService = userService;
+            StartPosition = FormStartPosition.CenterParent;
         }
 
         private void signUpBtn_Click(object sender, EventArgs e)
@@ -31,7 +39,8 @@ namespace FinancingManager
 
         private void logInBtn_Click(object sender, EventArgs e)
         {
-
+            user = userService.GetUsers()[0];
+            Close();
         }
     }
 }

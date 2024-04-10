@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FinancingManager.Entities
 {
     public class CostEntity : BaseEntity
     {
-        
+
         public double Cost { get; set; }
 
         public required string Name { get; set; }
@@ -19,6 +14,6 @@ namespace FinancingManager.Entities
         public required string CostType { get; set; }
         [ForeignKey("User")]
         public int UserId { get; set; }
-        public UserEntity User { get; set; }
+        public UserEntity? User { get; set; }
     }
 }

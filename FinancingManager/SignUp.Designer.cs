@@ -28,166 +28,173 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.signUpLabel = new System.Windows.Forms.Label();
-            this.logInBtn = new System.Windows.Forms.Button();
-            this.signUpBtn = new System.Windows.Forms.Button();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.surnameLabel = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.surnameTextBox = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            usernameLabel = new Label();
+            emailLabel = new Label();
+            passwordLabel = new Label();
+            usernameTextBox = new TextBox();
+            emailTextBox = new TextBox();
+            passwordTextBox = new TextBox();
+            signUpLabel = new Label();
+            logInBtn = new Button();
+            signUpBtn = new Button();
+            nameLabel = new Label();
+            surnameLabel = new Label();
+            nameTextBox = new TextBox();
+            surnameTextBox = new TextBox();
+            SuspendLayout();
             // 
             // usernameLabel
             // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.usernameLabel.Location = new System.Drawing.Point(13, 77);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(71, 17);
-            this.usernameLabel.TabIndex = 0;
-            this.usernameLabel.Text = "Username";
+            usernameLabel.AutoSize = true;
+            usernameLabel.Font = new Font("Cambria", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            usernameLabel.Location = new Point(15, 103);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new Size(90, 22);
+            usernameLabel.TabIndex = 0;
+            usernameLabel.Text = "Username";
             // 
             // emailLabel
             // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.emailLabel.Location = new System.Drawing.Point(15, 116);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(50, 17);
-            this.emailLabel.TabIndex = 1;
-            this.emailLabel.Text = "E-mail";
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new Font("Cambria", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            emailLabel.Location = new Point(17, 155);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new Size(62, 22);
+            emailLabel.TabIndex = 1;
+            emailLabel.Text = "E-mail";
             // 
             // passwordLabel
             // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.passwordLabel.Location = new System.Drawing.Point(15, 235);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(69, 17);
-            this.passwordLabel.TabIndex = 2;
-            this.passwordLabel.Text = "Password";
+            passwordLabel.AutoSize = true;
+            passwordLabel.Font = new Font("Cambria", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            passwordLabel.Location = new Point(17, 313);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new Size(87, 22);
+            passwordLabel.TabIndex = 2;
+            passwordLabel.Text = "Password";
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(121, 71);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(177, 23);
-            this.usernameTextBox.TabIndex = 3;
+            usernameTextBox.Location = new Point(138, 95);
+            usernameTextBox.Margin = new Padding(3, 4, 3, 4);
+            usernameTextBox.Name = "usernameTextBox";
+            usernameTextBox.Size = new Size(202, 27);
+            usernameTextBox.TabIndex = 3;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(121, 110);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(177, 23);
-            this.emailTextBox.TabIndex = 4;
+            emailTextBox.Location = new Point(138, 147);
+            emailTextBox.Margin = new Padding(3, 4, 3, 4);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(202, 27);
+            emailTextBox.TabIndex = 4;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(121, 229);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(177, 23);
-            this.passwordTextBox.TabIndex = 5;
+            passwordTextBox.Location = new Point(138, 305);
+            passwordTextBox.Margin = new Padding(3, 4, 3, 4);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new Size(202, 27);
+            passwordTextBox.TabIndex = 5;
             // 
             // signUpLabel
             // 
-            this.signUpLabel.AutoSize = true;
-            this.signUpLabel.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.signUpLabel.Location = new System.Drawing.Point(109, 9);
-            this.signUpLabel.Name = "signUpLabel";
-            this.signUpLabel.Size = new System.Drawing.Size(115, 42);
-            this.signUpLabel.TabIndex = 6;
-            this.signUpLabel.Text = "Sign Up";
+            signUpLabel.AutoSize = true;
+            signUpLabel.Font = new Font("Segoe Print", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            signUpLabel.Location = new Point(125, 12);
+            signUpLabel.Name = "signUpLabel";
+            signUpLabel.Size = new Size(141, 52);
+            signUpLabel.TabIndex = 6;
+            signUpLabel.Text = "Sign Up";
             // 
             // logInBtn
             // 
-            this.logInBtn.BackColor = System.Drawing.Color.OliveDrab;
-            this.logInBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.logInBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.logInBtn.Location = new System.Drawing.Point(9, 285);
-            this.logInBtn.Name = "logInBtn";
-            this.logInBtn.Size = new System.Drawing.Size(146, 28);
-            this.logInBtn.TabIndex = 7;
-            this.logInBtn.Text = "Log In";
-            this.logInBtn.UseVisualStyleBackColor = false;
-            this.logInBtn.Click += new System.EventHandler(this.logInBtn_Click);
+            logInBtn.BackColor = Color.SteelBlue;
+            logInBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            logInBtn.ForeColor = SystemColors.ButtonFace;
+            logInBtn.Location = new Point(174, 382);
+            logInBtn.Margin = new Padding(3, 4, 3, 4);
+            logInBtn.Name = "logInBtn";
+            logInBtn.Size = new Size(167, 37);
+            logInBtn.TabIndex = 7;
+            logInBtn.Text = "Log In";
+            logInBtn.UseVisualStyleBackColor = false;
+            logInBtn.Click += logInBtn_Click;
             // 
             // signUpBtn
             // 
-            this.signUpBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.signUpBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.signUpBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.signUpBtn.Location = new System.Drawing.Point(161, 285);
-            this.signUpBtn.Name = "signUpBtn";
-            this.signUpBtn.Size = new System.Drawing.Size(137, 28);
-            this.signUpBtn.TabIndex = 8;
-            this.signUpBtn.Text = "Sign Up";
-            this.signUpBtn.UseVisualStyleBackColor = false;
-            this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
+            signUpBtn.BackColor = Color.OliveDrab;
+            signUpBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            signUpBtn.ForeColor = SystemColors.ButtonFace;
+            signUpBtn.Location = new Point(15, 382);
+            signUpBtn.Margin = new Padding(3, 4, 3, 4);
+            signUpBtn.Name = "signUpBtn";
+            signUpBtn.Size = new Size(157, 37);
+            signUpBtn.TabIndex = 8;
+            signUpBtn.Text = "Sign Up";
+            signUpBtn.UseVisualStyleBackColor = false;
+            signUpBtn.Click += signUpBtn_Click;
             // 
             // nameLabel
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.nameLabel.Location = new System.Drawing.Point(15, 157);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(45, 17);
-            this.nameLabel.TabIndex = 9;
-            this.nameLabel.Text = "Name";
+            nameLabel.AutoSize = true;
+            nameLabel.Font = new Font("Cambria", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            nameLabel.Location = new Point(17, 209);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(57, 22);
+            nameLabel.TabIndex = 9;
+            nameLabel.Text = "Name";
             // 
             // surnameLabel
             // 
-            this.surnameLabel.AutoSize = true;
-            this.surnameLabel.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.surnameLabel.Location = new System.Drawing.Point(13, 194);
-            this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(64, 17);
-            this.surnameLabel.TabIndex = 10;
-            this.surnameLabel.Text = "Surname";
+            surnameLabel.AutoSize = true;
+            surnameLabel.Font = new Font("Cambria", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            surnameLabel.Location = new Point(15, 259);
+            surnameLabel.Name = "surnameLabel";
+            surnameLabel.Size = new Size(81, 22);
+            surnameLabel.TabIndex = 10;
+            surnameLabel.Text = "Surname";
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(121, 151);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(177, 23);
-            this.nameTextBox.TabIndex = 11;
+            nameTextBox.Location = new Point(138, 201);
+            nameTextBox.Margin = new Padding(3, 4, 3, 4);
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.Size = new Size(202, 27);
+            nameTextBox.TabIndex = 11;
             // 
             // surnameTextBox
             // 
-            this.surnameTextBox.Location = new System.Drawing.Point(121, 188);
-            this.surnameTextBox.Name = "surnameTextBox";
-            this.surnameTextBox.Size = new System.Drawing.Size(177, 23);
-            this.surnameTextBox.TabIndex = 12;
+            surnameTextBox.Location = new Point(138, 251);
+            surnameTextBox.Margin = new Padding(3, 4, 3, 4);
+            surnameTextBox.Name = "surnameTextBox";
+            surnameTextBox.Size = new Size(202, 27);
+            surnameTextBox.TabIndex = 12;
             // 
             // SignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 324);
-            this.Controls.Add(this.surnameTextBox);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.surnameLabel);
-            this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.signUpBtn);
-            this.Controls.Add(this.logInBtn);
-            this.Controls.Add(this.signUpLabel);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.emailLabel);
-            this.Controls.Add(this.usernameLabel);
-            this.Name = "SignUp";
-            this.Text = "SignUp";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUp_FormClosing);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(353, 432);
+            Controls.Add(surnameTextBox);
+            Controls.Add(nameTextBox);
+            Controls.Add(surnameLabel);
+            Controls.Add(nameLabel);
+            Controls.Add(signUpBtn);
+            Controls.Add(logInBtn);
+            Controls.Add(signUpLabel);
+            Controls.Add(passwordTextBox);
+            Controls.Add(emailTextBox);
+            Controls.Add(usernameTextBox);
+            Controls.Add(passwordLabel);
+            Controls.Add(emailLabel);
+            Controls.Add(usernameLabel);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "SignUp";
+            Text = "SignUp";
+            FormClosing += SignUp_FormClosing;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

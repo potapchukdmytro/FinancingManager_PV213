@@ -17,21 +17,27 @@ namespace FinancingManager
         public SignUp()
         {
             InitializeComponent();
+            result = DialogResult.Abort;
+            StartPosition = FormStartPosition.CenterParent;
         }
 
         private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            result = DialogResult.Abort;
         }
 
         private void logInBtn_Click(object sender, EventArgs e)
         {
-
+            result = DialogResult.OK;
+            Close();
         }
 
         private void signUpBtn_Click(object sender, EventArgs e)
         {
+            // Register logic
+            result = DialogResult.OK;
 
+            // if ok
+            Close();
         }
     }
 }

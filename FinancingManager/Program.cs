@@ -1,3 +1,5 @@
+using FinancingManager.Initializer;
+
 namespace FinancingManager
 {
     internal static class Program
@@ -11,7 +13,12 @@ namespace FinancingManager
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
+
+            Config config = new Config();
+
+            Seeder.SeedAsync(config.Context).Wait();
+
+            Application.Run(new MainForm(config));
         }
     }
 }
