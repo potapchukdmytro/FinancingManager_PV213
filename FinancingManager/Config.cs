@@ -10,8 +10,8 @@ namespace FinancingManager
         public AppDbContext Context { get; init; }
         public UserRepository UserRepository { get; init; }
         public CostRepository CostRepository { get; init; }
-
         public UserService UserService { get; init; }
+        public CostService CostService { get; init; }
         public Mapper Mapper { get; init; }
 
         public Config()
@@ -27,6 +27,7 @@ namespace FinancingManager
             Mapper = new Mapper(config);
 
             UserService = new UserService(UserRepository, Mapper);
+            CostService = new CostService(CostRepository, Mapper);
         }
     }
 }
