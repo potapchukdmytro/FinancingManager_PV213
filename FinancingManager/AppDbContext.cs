@@ -1,12 +1,18 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FinancingManager.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinancingManager
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptionsBuilder options)
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            options.UseNpgsql("User ID=kjboiynw;Password=ChsIHmmhJgHwUAbmYqI_0BdG6A3T7-FJ;Host=tyke.db.elephantsql.com;Port=5432;Database=kjboiynw;");
+            optionsBuilder.UseNpgsql("User ID=kjboiynw;Password=ChsIHmmhJgHwUAbmYqI_0BdG6A3T7-FJ;Host=tyke.db.elephantsql.com;Port=5432;Database=kjboiynw;");
+            base.OnConfiguring(optionsBuilder);
         }
+
+        public DbSet<UserEntity> Users { get; set; }
+        public DbSet<CostEntity> Costs { get; set; }
     }
 }

@@ -28,23 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewAll = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuItemAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemShow = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemShowAll = new System.Windows.Forms.ToolStripMenuItem();
-            this.ьenuItemCosts = new System.Windows.Forms.ToolStripMenuItem();
-            this.ьenuItemRevenue = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBoxSearch = new System.Windows.Forms.ToolStripTextBox();
-            this.menuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemUAH = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemUSD = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewTotal = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewAll
@@ -174,6 +157,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(882, 392);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
 
         }
 
