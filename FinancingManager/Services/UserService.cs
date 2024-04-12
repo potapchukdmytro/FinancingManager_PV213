@@ -4,6 +4,7 @@ using FinancingManager.Models;
 using FinancingManager.Repositories;
 using FinancingManager.Validation;
 using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinancingManager.Services
 {
@@ -50,6 +51,37 @@ namespace FinancingManager.Services
             {
                 throw new Exception("User not found.");
             }
+        }
+
+        public async Task<UserModel?> Login(LogInModel model)
+        {
+            if(await UserExistAsync(model.Login))
+            {
+                var entity = await GetByLoginAsync(model.Login);
+
+                if(entity.Password != model.Password)
+                {
+                    return null;
+                }
+                else
+                {
+                    return mapper.Map<UserModel>(entity);
+                }
+            }
+
+            return null;
+        }
+
+        private async Task<bool> UserExistAsync(string login)
+        {
+            var user = await GetByLoginAsync(login);
+            return user != null;
+        } 
+
+        private async Task<UserEntity?> GetByLoginAsync(string login)
+        {
+            var user = await userRepository.Users.FirstOrDefaultAsync(u => u.Email == login || u.UserName == login);
+            return user;
         }
 
         public async Task UpdateAsync(UserEntity entity)

@@ -1,5 +1,6 @@
 ﻿using FinancingManager.Models;
 using FinancingManager.Services;
+using FinancingManager.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,13 +15,13 @@ namespace FinancingManager
 {
     public partial class LogIn : Form
     {
-        public UserModel? user;
+        public UserModel? CurrentUser;
         private readonly UserService userService;
 
         public LogIn(UserService userService)
         {
             InitializeComponent();
-            user = null;
+            CurrentUser = null;
             this.userService = userService;
             StartPosition = FormStartPosition.CenterParent;
         }
@@ -37,37 +38,52 @@ namespace FinancingManager
                 this.Visible = true;
         }
 
-        private void logInBtn_Click(object sender, EventArgs e)
+        private async void logInBtn_Click(object sender, EventArgs e)
         {
-
-            string username = usernameTextBox.Text;
-            string password = passwordTextBox.Text;
-
-            if (string.IsNullOrEmpty(username))
+            LogInModel model = new LogInModel
             {
-                label2.Text = "Required";
-                label2.Visible = true;
-                return;
+                Login = usernameTextBox.Text,
+                Password = passwordTextBox.Text
+            };
+
+            LoginModelValidator validator = new LoginModelValidator();
+            var res = validator.Validate(model);
+
+            usernameError.Visible = false;
+            passwordError.Visible = false;
+
+            foreach (var error in res.Errors)
+            {
+                if(error.PropertyName == "Login")
+                {
+                    if (!usernameError.Visible)
+                    {
+                        usernameError.Text = error.ErrorMessage;
+                        usernameError.Visible = true;
+                    }
+                        
+                }
+                if (error.PropertyName == "Password")
+                {
+                    if(!passwordError.Visible)
+                    {
+                        passwordError.Text = error.ErrorMessage;
+                        passwordError.Visible = true;
+                    }
+                }
             }
 
-            if (string.IsNullOrWhiteSpace(password))
+            var user = await userService.Login(model);
+
+            if(user == null)
             {
-                label3.Text = "Required";
-                label3.Visible = true;
-                return;
+                MessageBox.Show("Не вірний логін або пароль");
             }
-
-
-            //UserModel foundUser = userService.GetUserByUsername(username);
-            //if (foundUser != null && foundUser.Password == password)
-            //{
-            //    user = foundUser;
-            //    Close();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Invalid username or password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            else
+            {
+                CurrentUser = user;
+                Close();
+            }
         }
     }
 }

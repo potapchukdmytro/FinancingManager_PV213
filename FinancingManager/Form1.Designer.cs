@@ -51,14 +51,14 @@
             // 
             dataGridViewAll.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewAll.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewAll.Location = new Point(19, 64);
-            dataGridViewAll.Margin = new Padding(6, 6, 6, 6);
+            dataGridViewAll.Location = new Point(12, 40);
+            dataGridViewAll.Margin = new Padding(4, 4, 4, 4);
             dataGridViewAll.MultiSelect = false;
             dataGridViewAll.Name = "dataGridViewAll";
             dataGridViewAll.RowHeadersVisible = false;
             dataGridViewAll.RowHeadersWidth = 51;
             dataGridViewAll.RowTemplate.Height = 25;
-            dataGridViewAll.Size = new Size(1393, 619);
+            dataGridViewAll.Size = new Size(857, 387);
             dataGridViewAll.TabIndex = 1;
             // 
             // menuStrip1
@@ -67,8 +67,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { menuItemAdd, menuItemEdit, menuItemDelete, menuItemShow, textBoxSearch, menuItemUSD, menuItemUAH, menuItemExit });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(11, 4, 0, 4);
-            menuStrip1.Size = new Size(1432, 47);
+            menuStrip1.Padding = new Padding(7, 2, 0, 2);
+            menuStrip1.Size = new Size(881, 31);
             menuStrip1.TabIndex = 6;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -76,43 +76,43 @@
             // 
             menuItemAdd.Image = Properties.Resources.free_icon_font_square_plus_9239975;
             menuItemAdd.Name = "menuItemAdd";
-            menuItemAdd.Size = new Size(40, 39);
+            menuItemAdd.Size = new Size(34, 27);
             // 
             // menuItemEdit
             // 
             menuItemEdit.Image = Properties.Resources.free_icon_font_settings_3917035;
             menuItemEdit.Name = "menuItemEdit";
-            menuItemEdit.Size = new Size(40, 39);
+            menuItemEdit.Size = new Size(34, 27);
             // 
             // menuItemDelete
             // 
             menuItemDelete.Image = Properties.Resources.free_icon_font_trash_3917176;
             menuItemDelete.Name = "menuItemDelete";
-            menuItemDelete.Size = new Size(40, 39);
+            menuItemDelete.Size = new Size(34, 27);
             // 
             // menuItemShow
             // 
             menuItemShow.DropDownItems.AddRange(new ToolStripItem[] { menuItemShowAll, menuItemCosts, menuItemRevenue });
             menuItemShow.Name = "menuItemShow";
-            menuItemShow.Size = new Size(151, 39);
+            menuItemShow.Size = new Size(97, 27);
             menuItemShow.Text = "Показати...";
             // 
             // menuItemShowAll
             // 
             menuItemShowAll.Name = "menuItemShowAll";
-            menuItemShowAll.Size = new Size(235, 44);
+            menuItemShowAll.Size = new Size(148, 26);
             menuItemShowAll.Text = "Все";
             // 
             // menuItemCosts
             // 
             menuItemCosts.Name = "menuItemCosts";
-            menuItemCosts.Size = new Size(235, 44);
+            menuItemCosts.Size = new Size(148, 26);
             menuItemCosts.Text = "Витрати";
             // 
             // menuItemRevenue
             // 
             menuItemRevenue.Name = "menuItemRevenue";
-            menuItemRevenue.Size = new Size(235, 44);
+            menuItemRevenue.Size = new Size(148, 26);
             menuItemRevenue.Text = "Доходи";
             // 
             // textBoxSearch
@@ -120,52 +120,53 @@
             textBoxSearch.AutoSize = false;
             textBoxSearch.AutoToolTip = true;
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(832, 39);
+            textBoxSearch.Size = new Size(514, 27);
             textBoxSearch.Text = "Пошук";
             // 
             // menuItemUSD
             // 
             menuItemUSD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             menuItemUSD.Name = "menuItemUSD";
-            menuItemUSD.Size = new Size(82, 39);
+            menuItemUSD.Size = new Size(53, 27);
             menuItemUSD.Text = "USD";
             // 
             // menuItemUAH
             // 
             menuItemUAH.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             menuItemUAH.Name = "menuItemUAH";
-            menuItemUAH.Size = new Size(85, 39);
+            menuItemUAH.Size = new Size(56, 27);
             menuItemUAH.Text = "UAH";
             // 
             // menuItemExit
             // 
             menuItemExit.Image = Properties.Resources.gui_check_no_icon_157196;
             menuItemExit.Name = "menuItemExit";
-            menuItemExit.Size = new Size(40, 39);
+            menuItemExit.Size = new Size(34, 27);
             // 
             // dataGridViewTotal
             // 
             dataGridViewTotal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewTotal.Location = new Point(19, 695);
-            dataGridViewTotal.Margin = new Padding(6, 6, 6, 6);
+            dataGridViewTotal.Location = new Point(12, 434);
+            dataGridViewTotal.Margin = new Padding(4, 4, 4, 4);
             dataGridViewTotal.Name = "dataGridViewTotal";
             dataGridViewTotal.RowHeadersWidth = 51;
             dataGridViewTotal.RowTemplate.Height = 25;
-            dataGridViewTotal.Size = new Size(1393, 239);
+            dataGridViewTotal.Size = new Size(857, 149);
             dataGridViewTotal.TabIndex = 7;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1432, 943);
+            ClientSize = new Size(881, 589);
             Controls.Add(dataGridViewTotal);
             Controls.Add(dataGridViewAll);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(6, 4, 6, 4);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "MainForm";
             Text = "Financing manager";
+            Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewAll).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
