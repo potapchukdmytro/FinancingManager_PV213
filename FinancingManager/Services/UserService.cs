@@ -2,6 +2,8 @@
 using FinancingManager.Entities;
 using FinancingManager.Models;
 using FinancingManager.Repositories;
+using FinancingManager.Validation;
+using FluentValidation;
 
 namespace FinancingManager.Services
 {
@@ -52,16 +54,28 @@ namespace FinancingManager.Services
 
         public async Task UpdateAsync(UserEntity entity)
         {
-            var existingEntity = await GetByIdAsync(entity.Id);
+            var validator = new UserEntityValidator();
+            var validationResult = await validator.ValidateAsync(entity);
 
-            if (existingEntity != null)
+            if (validationResult.IsValid)
             {
-                await userRepository.UpdateAsync(entity);
+
+                var existingEntity = await GetByIdAsync(entity.Id);
+
+                if (existingEntity != null)
+                {
+                    await userRepository.UpdateAsync(entity);
+                }
+                else
+                {
+                    throw new Exception("User not found.");
+                }
             }
             else
             {
-                throw new Exception("User not found.");
+                throw new ValidationException(validationResult.Errors);
             }
         }
+
     }
 }
