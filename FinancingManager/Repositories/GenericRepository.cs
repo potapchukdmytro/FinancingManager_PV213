@@ -19,13 +19,13 @@ namespace FinancingManager.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task Update(TEntity entity)
+        public async Task UpdateAsync(TEntity entity)
         {
             _context.Update(entity);
             await _context.SaveChangesAsync();
         }
 
-        public async Task Remove(TEntity entity)
+        public async Task RemoveAsync(TEntity entity)
         {
             _context.Remove(entity);
             await _context.SaveChangesAsync();
