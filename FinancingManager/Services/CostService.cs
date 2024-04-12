@@ -22,7 +22,13 @@ namespace FinancingManager.Services
 
         public async Task Add(CostEntity entity)
         {
-            await costRepository.AddAsync(entity);
+            try
+            {
+                await costRepository.AddAsync(entity);
+            }
+            catch (Exception)
+            {
+            }   
         }
 
         public async Task<CostEntity?> GetByIdAsync(int id)
@@ -39,16 +45,11 @@ namespace FinancingManager.Services
 
                 if (existingCost != null)
                 {
-                    await costRepository.Remove(existingCost);
-                }
-                else
-                {
-                    Console.WriteLine("cost with " + costID + " not found");
+                    await costRepository.RemoveAsync(existingCost);
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                Console.WriteLine("error while deleting cost: " + ex.Message);
             }
         }
         public async Task Edit(CostEntity editedCost)
@@ -59,13 +60,13 @@ namespace FinancingManager.Services
 
                 if (existingCost != null)
                 {
-                    await costRepository.Update(existingCost);
+                    await costRepository.UpdateAsync(existingCost);
                     
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine("error while redacting cost: " + ex.Message);
+                
             }
         }
         public List<CostEntity> GetAll()
@@ -74,11 +75,9 @@ namespace FinancingManager.Services
             {
                 return costRepository.Costs.ToList();
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                Console.WriteLine(ex.Message);
-
-                return null;
+                return new List<CostEntity>();
             }
         }
     }

@@ -42,7 +42,7 @@ namespace FinancingManager.Services
 
             if (existingEntity != null)
             {
-                await userRepository.Remove(entity);
+                await userRepository.RemoveAsync(entity);
             }
             else
             {
@@ -56,7 +56,7 @@ namespace FinancingManager.Services
 
             if (existingEntity != null)
             {
-                await userRepository.Update(entity);
+                await userRepository.UpdateAsync(entity);
             }
             else
             {
