@@ -33,10 +33,11 @@ namespace FinancingManager.Services
             await userRepository.AddAsync(entity);
         }
 
-        public async Task<UserEntity?> GetByIdAsync(int id)
+        public async Task<UserModel?> GetByIdAsync(int id)
         {
             var entity = await userRepository.GetByIdAsync(id);
-            return entity;
+            var model = mapper.Map<UserModel>(entity);
+            return model;
         }
 
         public async Task RemoveAsync(UserEntity entity)

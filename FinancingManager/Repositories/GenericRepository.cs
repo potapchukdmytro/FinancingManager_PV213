@@ -1,4 +1,5 @@
 ﻿  using FinancingManager.Entities;
+using FluentValidation.Results;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinancingManager.Repositories
@@ -33,8 +34,18 @@ namespace FinancingManager.Repositories
 
         public async Task<TEntity?> GetByIdAsync(int id)
         {
-            return await _context.Set<TEntity>()
+            try
+            {
+                var res = await _context.Set<TEntity>()
+                    .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.Id == id);
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error");
+            }
+            
         }
 
         public IQueryable<TEntity> GetAll()
