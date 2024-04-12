@@ -20,7 +20,7 @@ namespace FinancingManager
             LogIn logIn = new LogIn(userService);
             logIn.ShowDialog();
 
-            if(logIn.user == null)
+            if(logIn.CurrentUser == null)
             {
                 Close();
             }
