@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FinancingManager;
 using FinancingManager.Entities;
 using FinancingManager.Repositories;
+using FinancingManager.Validation;
 
 namespace FinancingManager
 {
@@ -45,6 +46,38 @@ namespace FinancingManager
                 LastName = surnameTextBox.Text,
                 Password = passwordTextBox.Text
             };
+
+            RegisterModelValidator validator = new RegisterModelValidator();
+            var res = validator.Validate(newUser);
+
+            foreach (var error in res.Errors)
+            {
+                if (error.PropertyName == "Email")
+                {
+                    emailError.Text = error.ErrorMessage;
+                    return;
+                }
+                if (error.PropertyName == "Password")
+                {
+                    passwordError.Text = error.ErrorMessage;
+                    return;
+                }
+                if (error.PropertyName == "UserName")
+                {
+                    usernameError.Text = error.ErrorMessage;
+                    return;
+                }
+                if (error.PropertyName == "LastName")
+                {
+                    surnameError.Text = error.ErrorMessage;
+                    return;
+                }
+                if (error.PropertyName == "Name")
+                {
+                    nameError.Text = error.ErrorMessage;
+                    return;
+                }
+            }
 
             if (CheckNewUser(userRepository, newUser))
             {
