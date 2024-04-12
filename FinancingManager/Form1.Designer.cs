@@ -28,151 +28,171 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridViewAll = new DataGridView();
-            menuStrip1 = new MenuStrip();
-            menuItemAdd = new ToolStripMenuItem();
-            menuItemEdit = new ToolStripMenuItem();
-            menuItemDelete = new ToolStripMenuItem();
-            menuItemShow = new ToolStripMenuItem();
-            menuItemShowAll = new ToolStripMenuItem();
-            menuItemCosts = new ToolStripMenuItem();
-            menuItemRevenue = new ToolStripMenuItem();
-            textBoxSearch = new ToolStripTextBox();
-            menuItemUSD = new ToolStripMenuItem();
-            menuItemUAH = new ToolStripMenuItem();
-            menuItemExit = new ToolStripMenuItem();
-            dataGridViewTotal = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewAll).BeginInit();
-            menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewTotal).BeginInit();
-            SuspendLayout();
+            this.dataGridViewAll = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuItemAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemShow = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemShowAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemCosts = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemRevenue = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxSearch = new System.Windows.Forms.ToolStripTextBox();
+            this.textBoxCurrentUser = new System.Windows.Forms.ToolStripTextBox();
+            this.menuItemUSD = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemUAH = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewTotal = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).BeginInit();
+            this.SuspendLayout();
             // 
             // dataGridViewAll
             // 
-            dataGridViewAll.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewAll.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewAll.Location = new Point(12, 40);
-            dataGridViewAll.Margin = new Padding(4, 4, 4, 4);
-            dataGridViewAll.MultiSelect = false;
-            dataGridViewAll.Name = "dataGridViewAll";
-            dataGridViewAll.RowHeadersVisible = false;
-            dataGridViewAll.RowHeadersWidth = 51;
-            dataGridViewAll.RowTemplate.Height = 25;
-            dataGridViewAll.Size = new Size(857, 387);
-            dataGridViewAll.TabIndex = 1;
+            this.dataGridViewAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAll.Location = new System.Drawing.Point(10, 30);
+            this.dataGridViewAll.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dataGridViewAll.MultiSelect = false;
+            this.dataGridViewAll.Name = "dataGridViewAll";
+            this.dataGridViewAll.RowHeadersVisible = false;
+            this.dataGridViewAll.RowHeadersWidth = 51;
+            this.dataGridViewAll.RowTemplate.Height = 25;
+            this.dataGridViewAll.Size = new System.Drawing.Size(750, 290);
+            this.dataGridViewAll.TabIndex = 1;
             // 
             // menuStrip1
             // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menuItemAdd, menuItemEdit, menuItemDelete, menuItemShow, textBoxSearch, menuItemUSD, menuItemUAH, menuItemExit });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 2, 0, 2);
-            menuStrip1.Size = new Size(881, 31);
-            menuStrip1.TabIndex = 6;
-            menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemAdd,
+            this.menuItemEdit,
+            this.menuItemDelete,
+            this.menuItemShow,
+            this.textBoxSearch,
+            this.textBoxCurrentUser,
+            this.menuItemUSD,
+            this.menuItemUAH,
+            this.menuItemExit});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(769, 28);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // menuItemAdd
             // 
-            menuItemAdd.Image = Properties.Resources.free_icon_font_square_plus_9239975;
-            menuItemAdd.Name = "menuItemAdd";
-            menuItemAdd.Size = new Size(34, 27);
+            this.menuItemAdd.Image = global::FinancingManager.Properties.Resources.free_icon_font_square_plus_9239975;
+            this.menuItemAdd.Name = "menuItemAdd";
+            this.menuItemAdd.Size = new System.Drawing.Size(32, 24);
             // 
             // menuItemEdit
             // 
-            menuItemEdit.Image = Properties.Resources.free_icon_font_settings_3917035;
-            menuItemEdit.Name = "menuItemEdit";
-            menuItemEdit.Size = new Size(34, 27);
+            this.menuItemEdit.Image = global::FinancingManager.Properties.Resources.free_icon_font_settings_3917035;
+            this.menuItemEdit.Name = "menuItemEdit";
+            this.menuItemEdit.Size = new System.Drawing.Size(32, 24);
             // 
             // menuItemDelete
             // 
-            menuItemDelete.Image = Properties.Resources.free_icon_font_trash_3917176;
-            menuItemDelete.Name = "menuItemDelete";
-            menuItemDelete.Size = new Size(34, 27);
+            this.menuItemDelete.Image = global::FinancingManager.Properties.Resources.free_icon_font_trash_3917176;
+            this.menuItemDelete.Name = "menuItemDelete";
+            this.menuItemDelete.Size = new System.Drawing.Size(32, 24);
             // 
             // menuItemShow
             // 
-            menuItemShow.DropDownItems.AddRange(new ToolStripItem[] { menuItemShowAll, menuItemCosts, menuItemRevenue });
-            menuItemShow.Name = "menuItemShow";
-            menuItemShow.Size = new Size(97, 27);
-            menuItemShow.Text = "Показати...";
+            this.menuItemShow.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemShowAll,
+            this.menuItemCosts,
+            this.menuItemRevenue});
+            this.menuItemShow.Name = "menuItemShow";
+            this.menuItemShow.Size = new System.Drawing.Size(79, 24);
+            this.menuItemShow.Text = "Показати...";
             // 
             // menuItemShowAll
             // 
-            menuItemShowAll.Name = "menuItemShowAll";
-            menuItemShowAll.Size = new Size(148, 26);
-            menuItemShowAll.Text = "Все";
+            this.menuItemShowAll.Name = "menuItemShowAll";
+            this.menuItemShowAll.Size = new System.Drawing.Size(118, 22);
+            this.menuItemShowAll.Text = "Все";
             // 
             // menuItemCosts
             // 
-            menuItemCosts.Name = "menuItemCosts";
-            menuItemCosts.Size = new Size(148, 26);
-            menuItemCosts.Text = "Витрати";
+            this.menuItemCosts.Name = "menuItemCosts";
+            this.menuItemCosts.Size = new System.Drawing.Size(118, 22);
+            this.menuItemCosts.Text = "Витрати";
             // 
             // menuItemRevenue
             // 
-            menuItemRevenue.Name = "menuItemRevenue";
-            menuItemRevenue.Size = new Size(148, 26);
-            menuItemRevenue.Text = "Доходи";
+            this.menuItemRevenue.Name = "menuItemRevenue";
+            this.menuItemRevenue.Size = new System.Drawing.Size(118, 22);
+            this.menuItemRevenue.Text = "Доходи";
             // 
             // textBoxSearch
             // 
-            textBoxSearch.AutoSize = false;
-            textBoxSearch.AutoToolTip = true;
-            textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(514, 27);
-            textBoxSearch.Text = "Пошук";
+            this.textBoxSearch.AutoSize = false;
+            this.textBoxSearch.AutoToolTip = true;
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(340, 23);
+            this.textBoxSearch.Text = "Пошук";
+            // 
+            // textBoxCurrentUser
+            // 
+            this.textBoxCurrentUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxCurrentUser.Name = "textBoxCurrentUser";
+            this.textBoxCurrentUser.Size = new System.Drawing.Size(110, 24);
             // 
             // menuItemUSD
             // 
-            menuItemUSD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            menuItemUSD.Name = "menuItemUSD";
-            menuItemUSD.Size = new Size(53, 27);
-            menuItemUSD.Text = "USD";
+            this.menuItemUSD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.menuItemUSD.Name = "menuItemUSD";
+            this.menuItemUSD.Size = new System.Drawing.Size(44, 24);
+            this.menuItemUSD.Text = "USD";
             // 
             // menuItemUAH
             // 
-            menuItemUAH.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            menuItemUAH.Name = "menuItemUAH";
-            menuItemUAH.Size = new Size(56, 27);
-            menuItemUAH.Text = "UAH";
+            this.menuItemUAH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.menuItemUAH.Name = "menuItemUAH";
+            this.menuItemUAH.Size = new System.Drawing.Size(45, 24);
+            this.menuItemUAH.Text = "UAH";
             // 
             // menuItemExit
             // 
-            menuItemExit.Image = Properties.Resources.gui_check_no_icon_157196;
-            menuItemExit.Name = "menuItemExit";
-            menuItemExit.Size = new Size(34, 27);
+            this.menuItemExit.Image = global::FinancingManager.Properties.Resources.gui_check_no_icon_157196;
+            this.menuItemExit.Name = "menuItemExit";
+            this.menuItemExit.Size = new System.Drawing.Size(32, 24);
+            this.menuItemExit.Click += new System.EventHandler(this.menuItemExit_Click);
             // 
             // dataGridViewTotal
             // 
-            dataGridViewTotal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewTotal.Location = new Point(12, 434);
-            dataGridViewTotal.Margin = new Padding(4, 4, 4, 4);
-            dataGridViewTotal.Name = "dataGridViewTotal";
-            dataGridViewTotal.RowHeadersWidth = 51;
-            dataGridViewTotal.RowTemplate.Height = 25;
-            dataGridViewTotal.Size = new Size(857, 149);
-            dataGridViewTotal.TabIndex = 7;
+            this.dataGridViewTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTotal.Location = new System.Drawing.Point(10, 326);
+            this.dataGridViewTotal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dataGridViewTotal.Name = "dataGridViewTotal";
+            this.dataGridViewTotal.RowHeadersWidth = 51;
+            this.dataGridViewTotal.RowTemplate.Height = 25;
+            this.dataGridViewTotal.Size = new System.Drawing.Size(750, 112);
+            this.dataGridViewTotal.TabIndex = 7;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(881, 589);
-            Controls.Add(dataGridViewTotal);
-            Controls.Add(dataGridViewAll);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
-            Margin = new Padding(4, 2, 4, 2);
-            Name = "MainForm";
-            Text = "Financing manager";
-            Load += MainForm_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewAll).EndInit();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewTotal).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(769, 442);
+            this.Controls.Add(this.dataGridViewTotal);
+            this.Controls.Add(this.dataGridViewAll);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.Name = "MainForm";
+            this.Text = "Financing manager";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -191,5 +211,6 @@
         private ToolStripMenuItem menuItemUAH;
         private ToolStripMenuItem menuItemExit;
         private DataGridView dataGridViewTotal;
+        private ToolStripTextBox textBoxCurrentUser;
     }
 }
